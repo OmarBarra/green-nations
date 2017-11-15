@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { FwModule } from '../fw/fw.module';
@@ -20,6 +21,7 @@ import { AppDataService } from './services/app-data.service';
 import { CountryPanelComponent } from './panels/country-panel/country-panel.component';
 import { ImagePanelComponent } from './panels/image-panel/image-panel.component';
 import { ReportesInternosComponent } from './reportes-internos/reportes-internos.component';
+import { LineChartDemoComponent } from './line-chart-demo/line-chart-demo.component';
 
 @NgModule({
   declarations: [
@@ -32,14 +34,16 @@ import { ReportesInternosComponent } from './reportes-internos/reportes-internos
     AuthenticatedUserComponent,
     CountryPanelComponent,
     ImagePanelComponent,
-    ReportesInternosComponent
+    ReportesInternosComponent,
+    LineChartDemoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     FwModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ChartsModule
   ],
   providers: [
     UserService,
